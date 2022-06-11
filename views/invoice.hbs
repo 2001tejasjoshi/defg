@@ -1,0 +1,37 @@
+<div class='container table-responsive' style='min-height: 50vh;'>
+  <table class='table table-hover'>
+    <thead>
+      <h1 class='text-center'>Invoice</h1>
+    </thead>
+    <tbody>
+      <tr class='table-primary'>
+        <th scope='row'>Transcation ID</th>
+        <td id='tid'>123456yhsgcdjajk</td>
+      </tr>
+      <tr class='table-secondary'>
+        <th scope='row'>Passenger name</th>
+        <td id='passengername'>{{user}}</td>
+      </tr>
+      <tr class='table-primary'>
+        <th scope='row'>Date</th>
+        <td id='date'>11-06-2022</td>
+      </tr>
+
+      <tr class='table-primary'>
+        <th scope='row'>Boarding point</th>
+        <td id='bpoint'>{{source}}</td>
+      </tr>
+      <tr class='table-secondary'>
+        <th scope='row'>Destination point</th>
+        <td id='dpoint'>{{dest}}</td>
+      </tr>
+    </tbody>
+  </table><br />
+  <h1>Total Fare = Rs.{{price}}</h1>
+  <form action='/qr' method='POST'>
+    <input type='hidden' name='user' value='{{user}}' />
+    <input type='hidden' name='source' value='{{source}}' />
+    <input type='hidden' name='dest' value='{{dest}}' />
+    <button type='submit'>Get sticker and QR Code</button>
+  </form>
+</div>
