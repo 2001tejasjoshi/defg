@@ -16,7 +16,7 @@ app.use(
 );
 
 // Load config
-dotenv.config({ path: '../config/config.env' });
+dotenv.config({ path: './backendConfig/config.env' });
 
 // Connect to MongoDB
 connectDB();
